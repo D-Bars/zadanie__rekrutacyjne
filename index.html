@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zadanie testowe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-[var(--white-blue)]">
+
+    <header class="flex items-center justify-between w-full px-[2.5%] py-2 shadow-[0_1px_7px_0_var(--alt-gray)]">
+        <a href="/" class="wrapper__img h-10 w-auto">
+            <img src="./src/images/logo/Logo.png" alt="HeaderLogo">
+        </a>
+
+        <button id="userMenuBtn" class="inline-flex items-center gap-2 relative z-10">
+            <div class="wrapper__img h-10 w-auto"><img src="./src/images/icons/avatar.svg" alt="HeaderAvatar"></div>
+            <span class="font-rubik text-[var(--black)] font-medium">Basia</span>
+            <div class="wrapper__img h-1.5 w-auto"><img src="./src/images/icons/arrow.svg" alt="HeaderArrow"></div>
+        </button>
+
+        <div id="userMenu"
+            class="absolute right-2 top-16 w-64 bg-white rounded-xl border border-gray-100 shadow-[0_8px_24px_-8px_rgba(0,0,0,.15)] opacity-0 pointer-events-none transition-all duration-300 scale-95 z-20">
+            <nav class="flex flex-col gap-3 p-2">
+                <a href="#" class="menu-link">
+                    <span class="h-5 shrink-0"><img src="./src/images/icons/nav__moje-kolekcje.svg" alt="NavIco"></span>
+                    <span class="text-sm">Moje kolekcje</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="h-5 shrink-0"><img src="./src/images/icons/nav__pobrania.svg" alt="NavIco"></span>
+                    <span class="text-sm">Pobrania</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="h-5 shrink-0"><img src="./src/images/icons/nav__edytuj-dane.svg" alt="NavIco"></span>
+                    <span class="text-sm">Edytuj dane</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="h-5 shrink-0"><img src="./src/images/icons/nav__historia-platnosci.svg"
+                            alt="NavIco"></span>
+                    <span class="text-sm">Historia płatności</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="h-5 shrink-0"><img src="./src/images/icons/nav__zmien-haslo.svg" alt="NavIco"></span>
+                    <span class="text-sm">Zmień hasło</span>
+                </a>
+                <div class="mx-4 my-2 h-px bg-gray-200"></div>
+                <a href="#" class="menu-link logout">
+                    <span class="h-5 shrink-0 rotate-180"><img src="./src/images/icons/nav__wyloguj-sie.svg"
+                            alt="NavIco"></span>
+                    <span class="text-sm">Wyloguj się</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex flex-col w-[75%] mx-auto my-10">
+        <section class="flex gap-10 justify-between">
+            <div>
+                <h2 class="relative font-rubik text-[var(--black)] font-bold text-2xl pr-10">
+                    Materiały edukacyjne
+                    <span class="absolute top-0 right-0 text-sm font-nunito text-[var(--grey)]">(456)</span>
+                </h2>
+                <p class="mt-5 text-sm font-nunito text-[var(--alt-gray)]">
+                    Wczesnoszkolni.pl - Materiały edukacyjne
+                </p>
+            </div>
+
+            <form>
+                <label class="sr-only" for="search__edu">Szukaj</label>
+                <div class="relative">
+                    <input id="search__edu__section" name="search__edu" placeholder="Szukaj"
+                        class="w-[260px] md:w-[300px] rounded-md bg-white py-2.5 pl-3 pr-10 shadow-md" />
+                    <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2">
+                        <div class="wrapper__img h-5 w-auto"><img src="./src/images/icons/search.svg" alt="SearchIco">
+                        </div>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="grid gap-y-6 gap-x-8 w-full mt-5"
+            style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+            <a href="#" class="group flex flex-col items-start">
+                <div class="wrapper__img w-full h-[40vh]">
+                    <img src="./src/images/items/edu.png" alt="EduItem" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2">
+                    <span class="chip theme-purple">
+                        <span class="chip-ico">
+                            <img src="./src/images/icons/pencil.svg" alt="EduItemIco" />
+                        </span>
+                        <span class="chip-label text-base font-nunito font-bold text-[var(--black)]">
+                            Karty pracy
+                        </span>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex flex-col items-start">
+                <div class="wrapper__img w-full h-[40vh]">
+                    <img src="./src/images/items/edu.png" alt="EduItem" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2">
+                    <span class="chip theme-blue">
+                        <span class="chip-ico">
+                            <img src="./src/images/icons/brush.svg" alt="EduItemIco" />
+                        </span>
+                        <span class="chip-label text-base font-nunito font-bold text-[var(--black)]">
+                            Inspiracje plastyczne
+                        </span>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex flex-col items-start">
+                <div class="wrapper__img w-full h-[40vh]">
+                    <img src="./src/images/items/edu.png" alt="EduItem" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2">
+                    <span class="chip theme-orange">
+                        <span class="chip-ico">
+                            <img src="./src/images/icons/award.svg" alt="EduItemIco" />
+                        </span>
+                        <span class="chip-label text-base font-nunito font-bold text-[var(--black)]">
+                            Dyplomy i podziękowania
+                        </span>
+                    </span>
+                </div>
+            </a>
+
+        </section>
+    </main>
+</body>
+
+</html>

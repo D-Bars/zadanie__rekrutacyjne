@@ -1,0 +1,100 @@
+:root {
+  --font-nunito: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-rubik: "Rubik", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --white-blue: #f9fafc;
+  --grey: #919191;
+  --alt-gray: #686868;
+  --light-gray: #f4f5f8;
+  --dark-grey: #585656;
+  --black: #202020;
+
+  --supportPurple: #ad4eec;
+  --supportBlue: #4ea2ec;
+  --supportOrange: #ff7700;
+}
+
+.theme-purple { --item-color: var(--supportPurple); }
+.theme-blue   { --item-color: var(--supportBlue); }
+.theme-orange { --item-color: var(--supportOrange); }
+
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  color: var(--black);
+  overflow: hidden;
+}
+
+.chip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--item-color) 18%, white);
+  transition: width .25s ease;
+  z-index: 0;
+}
+
+.group:hover .chip::before { width: 100%; }
+
+.chip-ico,
+.chip-label { position: relative; z-index: 1; }
+
+.chip-ico {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--item-color) 20%, white);
+}
+
+.chip-ico img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 8px;
+  padding: 12px 16px;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.menu-link:hover {
+  background: var(--light-gray);
+  color: var(--supportOrange);
+}
+
+.menu-link img {
+  filter: grayscale(100%) brightness(0);
+  transition: filter 0.2s;
+}
+
+.menu-link:hover img {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(83%) saturate(3155%) hue-rotate(6deg) brightness(102%) contrast(101%);
+}
+
+.font-nunito { font-family: var(--font-nunito); }
+.font-rubik  { font-family: var(--font-rubik); }
+
+.wrapper__img {
+  overflow: hidden;
+  display: flex;
+}
+
+.wrapper__img img {
+  object-fit: cover;
+}
